@@ -6,53 +6,76 @@
 
 @use "helpers" as *;
 
-.h0 {
+
+.h0, h1 {
   font-family: "STIX Two Text", sans-serif;
-  @include fluid-font-size(55,34);
   line-height: 1.35;
+}
+
+.h0 {
+  @include fluid-font-size(55, 34);
   font-weight: 500;
   color: var(--white);
 }
 
 .h1 {
-  font-family: "STIX Two Text", sans-serif;
   @include fluid-font-size(38, 24);
-  line-height: 1.35;
   font-weight: 400;
   color: var(--grey);
+}
+
+.SH0, .SH1, .SH2 {
+  font-family: "Montserrat", serif;
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--grey);
+}
+
+.SH0 {
+  font-size: toRem(24);
 }
 
 .SH1 {
-  font-family: "Montserrat", serif;
   font-size: toRem(18);
-  line-height: 1.6;
-  font-weight: 500;
-  color: var(--grey);
 }
 
 .SH2 {
-  font-family: "Montserrat", serif;
   font-size: toRem(16);
-  line-height: 1.6;
-  font-weight: 500;
-  color: var(--grey);
- }
+}
 
-.body {
+.body, .buttonB, .buttonS, .legend, .label {
   font-family: "Montserrat", serif;
   font-size: toRem(16);
   line-height: 1.6;
   font-weight: 400;
   color: var(--grey);
+}
+
+.buttonS {
+  font-weight: 500;
+  color: var(--white);
 }
 
 .label {
-  font-family: "Montserrat", serif;
   font-size: toRem(14);
-  line-height: 1.65;
-  font-weight: 400;
   color: var(--white);
 }
+
+.legend {
+  font-weight: 500;
+  color: var(--white);
+}
+
+.box-shadow {
+  box-shadow:
+    4px 4px 8px 0 red,
+    8px 8px 16px 0 blue;
+}
+
+
+
+
+
 
 
 
