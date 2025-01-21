@@ -1,0 +1,36 @@
+//*************************************
+// CSS style module for section _functions
+// author: Shpakov Vladyslav
+// at: 28.12.2024 8:00
+//*************************************
+
+@use "sass:math";
+
+//***** PX TO REM
+@function toRem($pixels) {
+  @if math.is-unitless($pixels) {
+    @return math.div($pixels, 16) + rem;
+  } @else {
+    @error 'Don`t use units!!! Only numbers are allowed!';
+  }
+}
+
+//***** FONTS SIZE
+@function fluid($max, $min) {
+  $maxViewportWith: 1400;
+  $minViewportWith: 360;
+
+  $maxSize: math.div($max, 16);
+  $minSize: math.div($min, 16);
+  $maxWidth: math.div($maxViewportWith, 16);
+  $minWidth: math.div($minViewportWith, 16);
+
+  $slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
+  $yAxisIntersection: -$minWidth * $slope + $minSize;
+
+ @return clamp(
+    #{$minSize * 1rem},
+    #{$yAxisIntersection * 1rem} + #{$slope * 100vw},
+    #{$maxSize * 1rem}
+  );
+}

@@ -1,0 +1,30 @@
+@use "normalize";
+@use "fonts";
+@use "variables";
+@use "utils";
+@use "globals";
+
+
+
+
+//*** BUTTON UP
+//@keyframes scroll-button {
+//  to {
+//    bottom: 1.875rem;
+//  }
+//}
+//.scroll-up__button {
+//  position: fixed;
+//  right: 3.125rem;
+//  bottom: -6.25rem;
+//  width: 3.125rem;
+//  aspect-ratio: 1/1;
+//  animation-name: scroll-button;
+//  animation-fill-mode: both;
+//  //noinspection CssInvalidFunction
+//  animation-timeline: scroll(block);
+//  animation-range: 0 500px;
+//}
+//.scroll-up__button svg:hover {
+//  fill: #121212;
+//}

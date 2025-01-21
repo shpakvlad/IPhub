@@ -1,0 +1,78 @@
+//*************************************
+// CSS style module for section media
+// author: Shpakov Vladyslav
+// at: 28.12.2024 8:00
+//*************************************
+
+@use "./functions" as *;
+
+$laptop: 1440.998;
+$tablet: 767.998;
+$mobile: 767.998;
+$mobile-small: 480.998;
+
+@mixin laptop-above {
+  @media (width > toRem($laptop)) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (width <= toRem($laptop)) {
+    @content;
+  }
+}
+
+@mixin tablet-above {
+  @media (width > toRem($tablet)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (width <= toRem($tablet)) {
+    @content;
+  }
+}
+
+@mixin mobile-above {
+  @media (width > toRem($mobile)) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (width <= toRem($mobile)) {
+    @content;
+  }
+}
+
+@mixin mobile-small-above {
+  @media (width > toRem($mobile-small)) {
+    @content;
+  }
+}
+
+@mixin mobile-small {
+  @media (width <= toRem($mobile-small)) {
+    @content;
+  }
+}
+
+
+//***** FOR RIGHT HOVER EFFECT
+@mixin hover($hasActiveEffectOnMobile: true) {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @if ($hasActiveEffectOnMobile) {
+    @media (any-hover: none) {
+      &:active {
+        @content;
+      }
+    }
+  }
+}

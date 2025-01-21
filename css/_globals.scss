@@ -1,0 +1,66 @@
+//*************************************
+// CSS style module for section globals
+// author: Shpakov Vladyslav
+// at: 28.12.2024 7:58
+//*************************************
+
+@use "helpers" as *;
+
+.h0 {
+  font-family: "STIX Two Text", sans-serif;
+  @include fluid-font-size(55,34);
+  line-height: 1.35;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.h1 {
+  font-family: "STIX Two Text", sans-serif;
+  @include fluid-font-size(38, 24);
+  line-height: 1.35;
+  font-weight: 400;
+  color: var(--grey);
+}
+
+.SH1 {
+  font-family: "Montserrat", serif;
+  font-size: toRem(18);
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--grey);
+}
+
+.SH2 {
+  font-family: "Montserrat", serif;
+  font-size: toRem(16);
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--grey);
+ }
+
+.body {
+  font-family: "Montserrat", serif;
+  font-size: toRem(16);
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--grey);
+}
+
+.label {
+  font-family: "Montserrat", serif;
+  font-size: toRem(14);
+  line-height: 1.65;
+  font-weight: 400;
+  color: var(--white);
+}
+
+
+
+/**
+  Добавляем обводку для клавиатур
+ */
+:focus-visible {
+  outline: red dashed toRem(2);
+  outline-offset: toRem(2);
+  transition-duration: 0s !important;
+}
