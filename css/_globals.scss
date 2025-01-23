@@ -7,6 +7,10 @@
 @use "helpers" as *;
 
 
+html {
+  background-color: var(--black-bg);
+}
+
 .h0, h1 {
   font-family: "STIX Two Text", sans-serif;
   line-height: 1.35;
@@ -33,6 +37,14 @@
 
 .SH0 {
   font-size: toRem(24);
+}
+
+.SH0 {
+  font-family: "Montserrat", serif;
+  font-size: fluid(24, 16); //   <-----------------------    //CHECK FONT SIZE ON SMALL SCREENS
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--white);
 }
 
 .SH1 {
@@ -66,16 +78,187 @@
   color: var(--white);
 }
 
-.box-shadow {
-  box-shadow:
-    4px 4px 8px 0 red,
-    8px 8px 16px 0 blue;
+.legend {
+  font-family: "Montserrat", serif;
+  font-size: toRem(16);
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--white);
 }
 
+.buttonS {
+  font-family: "Montserrat", serif;
+  font-size: fluid(16, 16); // <-----------------------    //CHECK FONT SIZE ON SMALL SCREENS
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--white-bg);
+}
 
+.button-elips {
+  max-width: toRem(300);
+  padding: toRem(20) toRem(24);
+  border-radius: 50%;
+  background-color: var(--black-bg);
+  color: var(--white);
+  position: relative;
+  border: none;
 
+  &:is(.button-reverse) {
+    background-color: var(--red);
+  }
 
+  &:after {
+    content: "";
+    width: toRem(300);
+    height: toRem(90);
+    transform: rotateZ(-5deg);
+    top: 0;
+    left: 0;
+    display: none;
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+  }
 
+  &:hover::after {
+    display: block;
+  }
+}
+
+.shadow-block {
+  --grad: linear-gradient(
+      150deg, var(--red) 10%, var(--shadow-block-bg) 30%
+  );
+
+  padding: toRem(20);
+  width: toRem(392);
+  color: var(--white);
+
+  background: linear-gradient(
+      var(--shadow-block-bg),
+      var(--shadow-block-bg)
+  ) padding-box,
+  var(--grad) border-box;
+  border: 1px solid transparent;
+  border-radius: var(--border-radius);
+}
+
+.button-elips-arrow {
+  margin-right: toRem(15);
+  background-color: transparent;
+  padding: toRem(9) toRem(21) toRem(12);
+  border: 1px solid var(--red);
+  border-radius: 50%;
+  color: var(--red);
+  white-space: nowrap;
+  position: relative;
+
+  .button-arrow__line-1 {
+    position: absolute;
+    display: block;
+    width: toRem(30);
+    height: toRem(1);
+    background-color: var(--red);
+    right: toRem(-15);
+    bottom: toRem(22)
+  }
+
+  .button-arrow__line-2 {
+    position: absolute;
+    display: block;
+    width: toRem(7);
+    height: toRem(1);
+    background-color: var(--red);
+    right: toRem(-16.5);
+    bottom: toRem(24.5);
+    transform: rotate(45deg);
+  }
+
+  .button-arrow__line-3 {
+    position: absolute;
+    display: block;
+    width: toRem(7);
+    height: toRem(1);
+    background-color: var(--red);
+    right: toRem(-16.5);
+    bottom: toRem(19.5);
+    transform: rotate(-45deg);
+  }
+}
+
+.button-slider {
+  @include square(toRem(40));
+  border-radius: toRem(50);
+  background-color: transparent;
+  border: 1px solid var(--red);
+  position: relative;
+
+  .button-arrow__line-1 {
+    position: absolute;
+    display: block;
+    width: toRem(40);
+    height: toRem(1);
+    background-color: var(--red);
+    right: toRem(-20);
+    bottom: toRem(18);
+  }
+
+  .button-arrow__line-2 {
+    position: absolute;
+    display: block;
+    width: toRem(7);
+    height: toRem(1);
+    background-color: var(--red);
+    right: toRem(-21);
+    bottom: toRem(20.5);
+    transform: rotate(45deg);
+  }
+
+  .button-arrow__line-3 {
+    position: absolute;
+    display: block;
+    width: toRem(7);
+    height: toRem(1);
+    background-color: var(--red);
+    right: toRem(-21);
+    bottom: toRem(15.5);
+    transform: rotate(-45deg);
+  }
+
+  &:is(.button-slider-left) {
+    .button-arrow__line-1 {
+      position: absolute;
+      display: block;
+      width: toRem(40);
+      height: toRem(1);
+      background-color: var(--red);
+      left: toRem(-20);
+      bottom: toRem(18);
+    }
+
+    .button-arrow__line-2 {
+      position: absolute;
+      display: block;
+      width: toRem(7);
+      height: toRem(1);
+      background-color: var(--red);
+      left: toRem(-21);
+      bottom: toRem(15.5);
+      transform: rotate(45deg);
+    }
+
+    .button-arrow__line-3 {
+      position: absolute;
+      display: block;
+      width: toRem(7);
+      height: toRem(1);
+      background-color: var(--red);
+      left: toRem(-21);
+      bottom: toRem(20.5);
+      transform: rotate(-45deg);
+    }
+  }
+}
 
 
 

@@ -253,9 +253,10 @@ svg * {
   --grey: #8A8A8A;
   --white-bg: #F9F9F9;
   --white: #FFF;
-  --active: rgba(255, 255, 255, .15);
+  --active: rgb(57, 56, 56);
   --hover: rgba(255, 255, 255, .1);
   --normal: rgba(255, 255, 255, .05);
+  --shadow-block-bg: #2b2a2a;
   --border-radius: 0.5rem;
   --container-width: 90rem;
   --container-padding-x: 1rem;
@@ -298,6 +299,10 @@ svg * {
   }
 }
 
+html {
+  background-color: var(--black-bg);
+}
+
 .h0, h1 {
   font-family: "STIX Two Text", sans-serif;
   line-height: 1.35;
@@ -324,6 +329,14 @@ svg * {
 
 .SH0 {
   font-size: 1.5rem;
+}
+
+.SH0 {
+  font-family: "Montserrat", serif;
+  font-size: clamp(1rem, 0.8269230769rem + 0.7692307692vw, 1.5rem);
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--white);
 }
 
 .SH1 {
@@ -357,8 +370,167 @@ svg * {
   color: var(--white);
 }
 
-.box-shadow {
-  box-shadow: 4px 4px 8px 0 red, 8px 8px 16px 0 blue;
+.legend {
+  font-family: "Montserrat", serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--white);
+}
+
+.buttonS {
+  font-family: "Montserrat", serif;
+  font-size: clamp(1rem, 1rem + 0vw, 1rem);
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--white-bg);
+}
+
+.button-elips {
+  max-width: 18.75rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 50%;
+  background-color: var(--black-bg);
+  color: var(--white);
+  position: relative;
+  border: none;
+}
+.button-elips:is(.button-reverse) {
+  background-color: var(--red);
+}
+.button-elips:after {
+  content: "";
+  width: 18.75rem;
+  height: 5.625rem;
+  transform: rotateZ(-5deg);
+  top: 0;
+  left: 0;
+  display: none;
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid var(--white);
+}
+.button-elips:hover::after {
+  display: block;
+}
+
+.shadow-block {
+  --grad: linear-gradient(
+      150deg, var(--red) 10%, var(--shadow-block-bg) 30%
+  );
+  padding: 1.25rem;
+  width: 24.5rem;
+  color: var(--white);
+  background: linear-gradient(var(--shadow-block-bg), var(--shadow-block-bg)) padding-box, var(--grad) border-box;
+  border: 1px solid transparent;
+  border-radius: var(--border-radius);
+}
+
+.button-elips-arrow {
+  margin-right: 0.9375rem;
+  background-color: transparent;
+  padding: 0.5625rem 1.3125rem 0.75rem;
+  border: 1px solid var(--red);
+  border-radius: 50%;
+  color: var(--red);
+  white-space: nowrap;
+  position: relative;
+}
+.button-elips-arrow .button-arrow__line-1 {
+  position: absolute;
+  display: block;
+  width: 1.875rem;
+  height: 0.0625rem;
+  background-color: var(--red);
+  right: -0.9375rem;
+  bottom: 1.375rem;
+}
+.button-elips-arrow .button-arrow__line-2 {
+  position: absolute;
+  display: block;
+  width: 0.4375rem;
+  height: 0.0625rem;
+  background-color: var(--red);
+  right: -1.03125rem;
+  bottom: 1.53125rem;
+  transform: rotate(45deg);
+}
+.button-elips-arrow .button-arrow__line-3 {
+  position: absolute;
+  display: block;
+  width: 0.4375rem;
+  height: 0.0625rem;
+  background-color: var(--red);
+  right: -1.03125rem;
+  bottom: 1.21875rem;
+  transform: rotate(-45deg);
+}
+
+.button-slider {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 3.125rem;
+  background-color: transparent;
+  border: 1px solid var(--red);
+  position: relative;
+}
+.button-slider .button-arrow__line-1 {
+  position: absolute;
+  display: block;
+  width: 2.5rem;
+  height: 0.0625rem;
+  background-color: var(--red);
+  right: -1.25rem;
+  bottom: 1.125rem;
+}
+.button-slider .button-arrow__line-2 {
+  position: absolute;
+  display: block;
+  width: 0.4375rem;
+  height: 0.0625rem;
+  background-color: var(--red);
+  right: -1.3125rem;
+  bottom: 1.28125rem;
+  transform: rotate(45deg);
+}
+.button-slider .button-arrow__line-3 {
+  position: absolute;
+  display: block;
+  width: 0.4375rem;
+  height: 0.0625rem;
+  background-color: var(--red);
+  right: -1.3125rem;
+  bottom: 0.96875rem;
+  transform: rotate(-45deg);
+}
+.button-slider:is(.button-slider-left) .button-arrow__line-1 {
+  position: absolute;
+  display: block;
+  width: 2.5rem;
+  height: 0.0625rem;
+  background-color: var(--red);
+  left: -1.25rem;
+  bottom: 1.125rem;
+}
+.button-slider:is(.button-slider-left) .button-arrow__line-2 {
+  position: absolute;
+  display: block;
+  width: 0.4375rem;
+  height: 0.0625rem;
+  background-color: var(--red);
+  left: -1.3125rem;
+  bottom: 0.96875rem;
+  transform: rotate(45deg);
+}
+.button-slider:is(.button-slider-left) .button-arrow__line-3 {
+  position: absolute;
+  display: block;
+  width: 0.4375rem;
+  height: 0.0625rem;
+  background-color: var(--red);
+  left: -1.3125rem;
+  bottom: 1.28125rem;
+  transform: rotate(-45deg);
 }
 
 /**
