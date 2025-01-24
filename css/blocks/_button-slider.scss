@@ -1,0 +1,81 @@
+//*************************************
+// CSS style module for section _button-slider
+// author: Shpakov Vladyslav
+// at: 24.01.2025 19:48
+//*************************************
+
+@use "../helpers" as *;
+
+.button-slider {
+  @include square(toRem(40));
+  border-radius: toRem(50);
+  background-color: transparent;
+  border: 1px solid var(--red);
+  position: relative;
+
+  .button-arrow__line-1 {
+    position: absolute;
+    display: block;
+    width: toRem(40);
+    height: toRem(1);
+    background-color: var(--red);
+    right: toRem(-20);
+    bottom: toRem(18);
+  }
+
+  .button-arrow__line-2 {
+    position: absolute;
+    display: block;
+    width: toRem(7);
+    height: toRem(1);
+    background-color: var(--red);
+    right: toRem(-21);
+    bottom: toRem(20.5);
+    transform: rotate(45deg);
+  }
+
+  .button-arrow__line-3 {
+    position: absolute;
+    display: block;
+    width: toRem(7);
+    height: toRem(1);
+    background-color: var(--red);
+    right: toRem(-21);
+    bottom: toRem(15.5);
+    transform: rotate(-45deg);
+  }
+
+  &:is(.button-slider-left) {
+    .button-arrow__line-1 {
+      position: absolute;
+      display: block;
+      width: toRem(40);
+      height: toRem(1);
+      background-color: var(--red);
+      left: toRem(-20);
+      bottom: toRem(18);
+    }
+
+    .button-arrow__line-2 {
+      position: absolute;
+      display: block;
+      width: toRem(7);
+      height: toRem(1);
+      background-color: var(--red);
+      left: toRem(-21);
+      bottom: toRem(15.5);
+      transform: rotate(45deg);
+    }
+
+    .button-arrow__line-3 {
+      position: absolute;
+      display: block;
+      width: toRem(7);
+      height: toRem(1);
+      background-color: var(--red);
+      left: toRem(-21);
+      bottom: toRem(20.5);
+      transform: rotate(-45deg);
+    }
+  }
+}

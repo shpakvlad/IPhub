@@ -366,7 +366,7 @@ html {
   color: var(--white);
 }
 
-.legend {
+.label {
   font-weight: 500;
   color: var(--white);
 }
@@ -385,6 +385,59 @@ html {
   line-height: 1.6;
   font-weight: 400;
   color: var(--white-bg);
+}
+
+/**
+  Добавляем обводку для клавиатур
+ */
+:focus-visible {
+  outline: red dashed 0.125rem;
+  outline-offset: 0.125rem;
+  transition-duration: 0s !important;
+}
+
+/* Скрываем стандартный чекбокс */
+.custom-checkbox input[type=checkbox] {
+  display: none;
+}
+
+/* Выравнивание текста */
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+/* Стиль для кастомного чекбокса */
+.custom-checkbox span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--grey);
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  background: white;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Отмеченное состояние */
+.custom-checkbox input[type=checkbox]:checked + span {
+  background: var(--red);
+  border-color: var(--red);
+}
+
+/* Галочка */
+.custom-checkbox input[type=checkbox]:checked + span::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 5px;
+  width: 4px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
 
 .button-elips {
@@ -413,58 +466,6 @@ html {
 }
 .button-elips:hover::after {
   display: block;
-}
-
-.shadow-block {
-  --grad: linear-gradient(
-      150deg, var(--red) 10%, var(--shadow-block-bg) 30%
-  );
-  padding: 1.25rem;
-  width: 24.5rem;
-  color: var(--white);
-  background: linear-gradient(var(--shadow-block-bg), var(--shadow-block-bg)) padding-box, var(--grad) border-box;
-  border: 1px solid transparent;
-  border-radius: var(--border-radius);
-}
-
-.button-elips-arrow {
-  margin-right: 0.9375rem;
-  background-color: transparent;
-  padding: 0.5625rem 1.3125rem 0.75rem;
-  border: 1px solid var(--red);
-  border-radius: 50%;
-  color: var(--red);
-  white-space: nowrap;
-  position: relative;
-}
-.button-elips-arrow .button-arrow__line-1 {
-  position: absolute;
-  display: block;
-  width: 1.875rem;
-  height: 0.0625rem;
-  background-color: var(--red);
-  right: -0.9375rem;
-  bottom: 1.375rem;
-}
-.button-elips-arrow .button-arrow__line-2 {
-  position: absolute;
-  display: block;
-  width: 0.4375rem;
-  height: 0.0625rem;
-  background-color: var(--red);
-  right: -1.03125rem;
-  bottom: 1.53125rem;
-  transform: rotate(45deg);
-}
-.button-elips-arrow .button-arrow__line-3 {
-  position: absolute;
-  display: block;
-  width: 0.4375rem;
-  height: 0.0625rem;
-  background-color: var(--red);
-  right: -1.03125rem;
-  bottom: 1.21875rem;
-  transform: rotate(-45deg);
 }
 
 .button-slider {
@@ -534,57 +535,62 @@ html {
   transform: rotate(-45deg);
 }
 
-/**
-  Добавляем обводку для клавиатур
- */
-:focus-visible {
-  outline: red dashed 0.125rem;
-  outline-offset: 0.125rem;
-  transition-duration: 0s !important;
+.shadow-block {
+  --grad: linear-gradient(
+      150deg, var(--red) 10%, var(--shadow-block-bg) 30%
+  );
+  padding: 1.25rem;
+  width: 24.5rem;
+  color: var(--white);
+  background: linear-gradient(var(--shadow-block-bg), var(--shadow-block-bg)) padding-box, var(--grad) border-box;
+  border: 1px solid transparent;
+  border-radius: var(--border-radius);
 }
 
-/* Скрываем стандартный чекбокс */
-.custom-checkbox input[type=checkbox] {
-  display: none;
-}
-
-/* Выравнивание текста */
-.custom-checkbox {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-}
-
-/* Стиль для кастомного чекбокса */
-.custom-checkbox span {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--grey);
-  border-radius: 4px;
+.button-elips-arrow {
+  margin-right: 0.9375rem;
+  background-color: transparent;
+  padding: 0.5625rem 1.3125rem 0.75rem;
+  border: 1px solid var(--red);
+  border-radius: 50%;
+  color: var(--red);
+  white-space: nowrap;
   position: relative;
-  cursor: pointer;
-  background: white;
-  transition: all 0.2s ease-in-out;
 }
-
-/* Отмеченное состояние */
-.custom-checkbox input[type=checkbox]:checked + span {
-  background: var(--red);
-  border-color: var(--red);
-}
-
-/* Галочка */
-.custom-checkbox input[type=checkbox]:checked + span::before {
-  content: "";
+.button-elips-arrow .button-arrow__line-1 {
   position: absolute;
-  top: 1px;
-  left: 5px;
-  width: 4px;
-  height: 9px;
-  border: solid white;
-  border-width: 0 2px 2px 0;
+  display: block;
+  width: 1.875rem;
+  height: 0.0625rem;
+  background-color: var(--red);
+  right: -0.9375rem;
+  bottom: 1.375rem;
+}
+.button-elips-arrow .button-arrow__line-2 {
+  position: absolute;
+  display: block;
+  width: 0.4375rem;
+  height: 0.0625rem;
+  background-color: var(--red);
+  right: -1.03125rem;
+  bottom: 1.53125rem;
   transform: rotate(45deg);
+}
+.button-elips-arrow .button-arrow__line-3 {
+  position: absolute;
+  display: block;
+  width: 0.4375rem;
+  height: 0.0625rem;
+  background-color: var(--red);
+  right: -1.03125rem;
+  bottom: 1.21875rem;
+  transform: rotate(-45deg);
+}
+
+.button-radio {
+  accent-color: var(--red);
+  width: 1rem;
+  height: 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */

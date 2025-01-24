@@ -1,0 +1,26 @@
+//*************************************
+// CSS style module for section _shadow-block
+// author: Shpakov Vladyslav
+// at: 24.01.2025 19:46
+//*************************************
+
+@use "../helpers" as *;
+
+
+.shadow-block {
+  --grad: linear-gradient(
+      150deg, var(--red) 10%, var(--shadow-block-bg) 30%
+  );
+
+  padding: toRem(20);
+  width: toRem(392);
+  color: var(--white);
+
+  background: linear-gradient(
+      var(--shadow-block-bg),
+      var(--shadow-block-bg)
+  ) padding-box,
+  var(--grad) border-box;
+  border: 1px solid transparent;
+  border-radius: var(--border-radius);
+}

@@ -1,0 +1,14 @@
+//*************************************
+// CSS style module for section _button-radio
+// author: Shpakov Vladyslav
+// at: 24.01.2025 19:52
+//*************************************
+
+@use "../helpers" as *;
+
+.button-radio {
+
+  accent-color: var(--red);
+  width: toRem(16);
+  height: toRem(16);
+}

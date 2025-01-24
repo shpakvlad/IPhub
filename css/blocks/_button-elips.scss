@@ -1,0 +1,39 @@
+//*************************************
+// CSS style module for section _button-elips
+// author: Shpakov Vladyslav
+// at: 24.01.2025 19:46
+//*************************************
+
+@use "../helpers" as *;
+
+
+.button-elips {
+  max-width: toRem(300);
+  padding: toRem(20) toRem(24);
+  border-radius: 50%;
+  background-color: var(--black-bg);
+  color: var(--white);
+  position: relative;
+  border: none;
+
+  &:is(.button-reverse) {
+    background-color: var(--red);
+  }
+
+  &:after {
+    content: "";
+    width: toRem(300);
+    height: toRem(90);
+    transform: rotateZ(-5deg);
+    top: 0;
+    left: 0;
+    display: none;
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+  }
+
+  &:hover::after {
+    display: block;
+  }
+}

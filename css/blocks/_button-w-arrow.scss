@@ -1,0 +1,51 @@
+//*************************************
+// CSS style module for section _button-w-arrow
+// author: Shpakov Vladyslav
+// at: 24.01.2025 19:47
+//*************************************
+
+@use "../helpers" as *;
+
+
+.button-elips-arrow {
+  margin-right: toRem(15);
+  background-color: transparent;
+  padding: toRem(9) toRem(21) toRem(12);
+  border: 1px solid var(--red);
+  border-radius: 50%;
+  color: var(--red);
+  white-space: nowrap;
+  position: relative;
+
+  .button-arrow__line-1 {
+    position: absolute;
+    display: block;
+    width: toRem(30);
+    height: toRem(1);
+    background-color: var(--red);
+    right: toRem(-15);
+    bottom: toRem(22)
+  }
+
+  .button-arrow__line-2 {
+    position: absolute;
+    display: block;
+    width: toRem(7);
+    height: toRem(1);
+    background-color: var(--red);
+    right: toRem(-16.5);
+    bottom: toRem(24.5);
+    transform: rotate(45deg);
+  }
+
+  .button-arrow__line-3 {
+    position: absolute;
+    display: block;
+    width: toRem(7);
+    height: toRem(1);
+    background-color: var(--red);
+    right: toRem(-16.5);
+    bottom: toRem(19.5);
+    transform: rotate(-45deg);
+  }
+}
