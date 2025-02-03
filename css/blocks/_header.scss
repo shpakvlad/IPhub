@@ -1,0 +1,57 @@
+//*************************************
+// CSS style module for section _header
+// author: Shpakov Vladyslav
+// at: 29.01.2025 13:32
+//*************************************
+
+@use "../helpers" as *;
+
+.header {
+
+  &__inner {
+    background-color: var(--normal);
+  }
+
+  &__content {
+    @include laptop {
+      padding-block: toRem(12);
+    }
+
+    padding-block: toRem(20);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__center {
+    display: flex;
+    align-items: center;
+    column-gap: toRem(20);
+
+    &-phone {
+      color: var(--white);
+    }
+
+    &-button {
+      background-color: transparent;
+      border: none;
+      color: var(--red);
+
+      &:hover {
+        color: var(--white);
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    column-gap: toRem(30);
+
+    &-link {
+      &:hover {
+        color: var(--red);
+      }
+    }
+  }
+}

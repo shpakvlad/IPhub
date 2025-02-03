@@ -17,7 +17,7 @@
 
   <link rel="icon" href="./favicon.ico" sizes="any">
   <link rel="icon" href="./icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="apple-touch-icon" href="./icon.png">
 
   <link rel="manifest" href="./site.webmanifest">
   <meta name="theme-color" content="#fafafa">
@@ -25,54 +25,170 @@
   <script src="./js/main.js" type="module" defer></script>
 </head>
 
-<body class="container">
+<body>
+<header class="header" data-js-header>
+  <div class="header__inner">
+    <div class="header__content container">
+
+      <a href="/"
+         class="header__logo"
+         aria-label="IPHub логотип"
+         title="IPHub логотип">
+        <img class="logo" width="129" height="29" src="/icons/logo.svg" alt="IPHub логотип" aria-label="">
+      </a>
+
+      <div class="header__center hidden-mobile-small">
+        <p class="header__center-phone SH1">
+          +7 (888) 888 88 88
+        </p>
+
+        <button class="button header__center-button buttonS"
+                type="button"
+                title="Получить консультацию"
+                aria-label="Получить консультацию"
+        >
+          Получить консультацию
+        </button>
+      </div>
+
+      <nav class="header__menu hidden-laptop">
+        <a href="#"
+           class="header__menu-link buttonS"
+           aria-label="Услуги"
+           title="Услуги">Услуги
+        </a>
+
+        <a href="#"
+           class="header__menu-link buttonS"
+           aria-label="Кейсы"
+           title="Кейсы">Кейсы
+        </a>
+        <a href="#"
+           class="header__menu-link buttonS"
+           aria-label="Ча.Во."
+           title="Ча.Во.">Ча.Во.
+        </a>
+      </nav>
+
+      <button class="hero__menu-button visible-laptop" data-js-burger-button >
+        <span class="hero__menu-button-line"></span>
+        <span class="hero__menu-button-line"></span>
+        <span class="hero__menu-button-line"></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="header__menu-hidden visible-laptop" data-js-menu >
+    <nav class="header__menu-hidden-list">
+      <a href="#"
+         class="header__menu-hidden-link SH2"
+         aria-label="Услуги"
+         title="Услуги">Услуги
+      </a>
+      <a href="#"
+         class="header__menu-hidden-link SH2"
+         aria-label="Кейсы"
+         title="Кейсы">Кейсы
+      </a>
+      <a href="#"
+         class="header__menu-hidden-link SH2"
+         aria-label="Ча.Во."
+         title="Ча.Во.">Ча.Во.
+      </a>
+    </nav>
+
+    <div class="header__menu-hidden-contacts">
+
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+
+  <div class="hero__content container">
+
+    <div class="hero__inner">
+
+      <p class="hero__up-title legend">ВАШ IP ПАРТНЕР</p>
+
+      <h1 class="hero__title h0">
+        Интеллектуальная <span>собственность</span>
+      </h1>
+
+      <div class="hero__subtitle legend">
+        Индивидуальные правовые решения для защиты и охраны ваших нематериальных активов в России и за рубежом
+      </div>
+
+      <div class="hero__button-panel">
+        <button class="buttonS button-elips button-reverse">Получить индивидуальную <br> консультацию</button>
+
+        <button class="button-elips-arrow"
+                type="button"
+                title="Все услуги"
+                aria-label="Все услуги"
+        > Все услуги
+          <span class="button-arrow__line-1"></span>
+          <span class="button-arrow__line-2"></span>
+          <span class="button-arrow__line-3"></span>
+        </button>
+      </div>
+    </div>
+
+<!--    <img width="586" height="585" class="hero__image" src="./img/hero.webp"-->
+<!--         alt="Золотое сечение Леонардо (раковина моллюска)" aria-label="Золотое сечение Леонардо (раковина моллюска)">-->
+
+
+  </div>
+
+</section>
 
 <!-- Add your site or application content here -->
-<p>Don`t forget enter VIEWPORT and --container-width sizes!!!</p>
+<!--<p>Don`t forget enter VIEWPORT and &#45;&#45;container-width sizes!!!</p>-->
 
-<label class="custom-checkbox">
-  <input type="checkbox"/>
-  <span></span>
-  Выбор
-</label>
+<!--<label class="custom-checkbox">-->
+<!--  <input type="checkbox"/>-->
+<!--  <span></span>-->
+<!--  Выбор-->
+<!--</label>-->
 
-<button class="buttonS button-elips">Получить индивидуальную консультацию</button>
+<!--<button class="buttonS button-elips">Получить индивидуальную консультацию</button>-->
 
-<div class="shadow-block shadow-block__rounded">
+<!--<div class="shadow-block shadow-block__rounded">-->
 
-  <p>61</p>
-  <p>Lorem ipsum dolor.</p>
-</div>
+<!--  <p>61</p>-->
+<!--  <p>Lorem ipsum dolor.</p>-->
+<!--</div>-->
 
-<button class="button-elips-arrow">
-  Все услуги
-  <span class="button-arrow__line-1"></span>
-  <span class="button-arrow__line-2"></span>
-  <span class="button-arrow__line-3"></span>
-</button>
+<!--<button class="button-elips-arrow">-->
+<!--  Все услуги-->
+<!--  <span class="button-arrow__line-1"></span>-->
+<!--  <span class="button-arrow__line-2"></span>-->
+<!--  <span class="button-arrow__line-3"></span>-->
+<!--</button>-->
 
-<button class="button-slider button-slider-left">
-  <span class="button-arrow__line-1"></span>
-  <span class="button-arrow__line-2"></span>
-  <span class="button-arrow__line-3"></span>
-</button>
-<button class="button-slider ">
-  <span class="button-arrow__line-1"></span>
-  <span class="button-arrow__line-2"></span>
-  <span class="button-arrow__line-3"></span>
-</button>
+<!--<button class="button-slider button-slider-left">-->
+<!--  <span class="button-arrow__line-1"></span>-->
+<!--  <span class="button-arrow__line-2"></span>-->
+<!--  <span class="button-arrow__line-3"></span>-->
+<!--</button>-->
+<!--<button class="button-slider ">-->
+<!--  <span class="button-arrow__line-1"></span>-->
+<!--  <span class="button-arrow__line-2"></span>-->
+<!--  <span class="button-arrow__line-3"></span>-->
+<!--</button>-->
 
+<!--<fieldset>-->
+<!--<div>-->
+<!--  <input type="radio" id="louie" name="drone" value="louie" />-->
+<!--  <label for="louie">Louie</label>-->
+<!--</div>-->
 
-<div>
-  <input class="button-radio" type="radio" id="louie" name="drone" value="louie" />
-  <label for="louie">Louie</label>
-</div>
-
-<div>
-  <input type="radio" id="louie1" name="drone" value="louie1"/>
-  <label for="louie1">Loucscsie</label>
-</div>
-
+<!--<div>-->
+<!--  <input type="radio" id="louie1" name="drone" value="louie1"-->
+<!--  style="accent-color: red; width: 20px; height: 20px; border: 2px solid #4CAF50;"/>-->
+<!--  <label for="louie1">Louie</label>-->
+<!--</div>-->
+<!--</fieldset>-->
 </body>
 
 </html>

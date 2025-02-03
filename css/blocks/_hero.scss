@@ -1,0 +1,85 @@
+//*************************************
+// CSS style module for section _hero
+// author: Shpakov Vladyslav
+// at: 30.01.2025 8:30
+//*************************************
+
+@use "../helpers" as *;
+
+.hero {
+
+  &__content {
+    padding-top: toRem(33);
+    display: flex;
+    align-items: center;
+
+    background-image: url(../../img/hero-bg.webp);
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: fluid(544, 270) fluid(513, 255);
+
+    @include mobile-small {
+      background: none;
+    }
+  }
+
+  &__inner {
+    @include mobile-small {
+      grid-template-columns: 1fr;
+      justify-content: center;
+
+      align-items: center;
+      text-align: center;
+    }
+
+    display: grid;
+    grid-template-columns: fluid(715, 320);
+  }
+
+  &__up-title {
+    margin-bottom: toRem(8);
+    color: var(--grey);
+  }
+
+
+  &__title {
+    margin-bottom: toRem(16);
+    position: relative;
+
+    span {
+      font-style: italic;
+    }
+
+    &:before {
+      content: '\0275C';
+      color: var(--red);
+      position: absolute;
+      left: toRem(-20);
+    }
+
+    &:after {
+      content: '\0275B';
+      color: var(--red);
+      margin-left: toRem(-10);
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: toRem(32);
+    color: var(--grey);
+  }
+
+  &__button-panel {
+    display: flex;
+    align-items: center;
+    column-gap: toRem(20);
+
+    @include mobile-small {
+      flex-direction: column;
+
+      .button-elips-arrow {
+        margin-top: toRem(16);
+      }
+    }
+  }
+}

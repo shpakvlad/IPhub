@@ -6,7 +6,6 @@
 
 @use "helpers" as *;
 
-
 html {
   background-color: var(--black-bg);
   color: var(--white);
@@ -94,13 +93,6 @@ html {
   font-weight: 400;
   color: var(--white-bg);
 }
-
-
-
-
-
-
-
 
 /**
   Добавляем обводку для клавиатур

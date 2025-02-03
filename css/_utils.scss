@@ -27,3 +27,21 @@
     display: none !important;
   }
 }
+
+.hidden-mobile-small {
+  @include mobile-small {
+    display: none !important;
+  }
+}
+
+.hidden-laptop {
+   @include laptop {
+     display: none !important;
+   }
+ }
+
+.visible-laptop {
+  @include laptop-above {
+    display: none !important;
+  }
+}

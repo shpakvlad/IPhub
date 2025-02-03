@@ -1,0 +1,30 @@
+//*************************************
+// CSS style module for section _header-menu-hidden
+// author: Shpakov Vladyslav
+// at: 30.01.2025 15:28
+//*************************************
+
+@use "../helpers" as *;
+
+.header__menu-hidden {
+  padding-top: toRem(70);
+  padding-left: toRem(225);
+  padding-right:  toRem(120);
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100dvh;
+  background-color: var(--black-bg);
+  z-index: 999;
+  transition-duration: var(--transition-duration);
+  -webkit-box-shadow: -10px 0 10px -7px  rgb(218, 69, 51);
+  -moz-box-shadow: -10px 0 10px -7px rgb(218, 69, 51);
+  box-shadow: -10px 0 10px -7px rgb(218, 69, 51);
+
+  &:not(.is-active) {
+    @include hide;
+
+    translate: 100%;
+  }
+
+}
