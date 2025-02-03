@@ -1,0 +1,11 @@
+//*************************************
+// CSS style module for section _menu-hidden-contacts-item-header
+// author: Shpakov Vladyslav
+// at: 03.02.2025 19:33
+//*************************************
+
+@use "../helpers" as *;
+
+.header__menu-hidden-contacts-item-header {
+  margin-bottom: toRem(20);
+}

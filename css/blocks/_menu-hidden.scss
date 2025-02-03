@@ -6,6 +6,11 @@
 
 @use "../helpers" as *;
 
+
+
+
+//TODO: Add image to menu bottom
+
 .header__menu-hidden {
   padding-top: toRem(70);
   padding-left: toRem(225);
@@ -14,6 +19,9 @@
   top: 0;
   right: 0;
   height: 100dvh;
+
+  display: flex;
+
   background-color: var(--black-bg);
   z-index: 999;
   transition-duration: var(--transition-duration);
@@ -26,5 +34,4 @@
 
     translate: 100%;
   }
-
 }

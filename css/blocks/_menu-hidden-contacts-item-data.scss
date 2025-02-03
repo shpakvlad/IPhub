@@ -1,0 +1,16 @@
+//*************************************
+// CSS style module for section _menu-hidden-contacts-item-data
+// author: Shpakov Vladyslav
+// at: 03.02.2025 19:37
+//*************************************
+
+@use "../helpers" as *;
+
+.header__menu-hidden-contacts-item-data {
+  margin-bottom: toRem(15);
+
+}
+
+.address {
+  color: var(--grey);
+}

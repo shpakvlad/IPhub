@@ -1,0 +1,14 @@
+//*************************************
+// CSS style module for section _menu-hidden-list
+// author: Shpakov Vladyslav
+// at: 03.02.2025 19:19
+//*************************************
+
+@use "../helpers" as *;
+
+.header__menu-hidden-list{
+  margin-right: toRem(120);
+  display: flex;
+  flex-direction: column;
+  row-gap: toRem(20);
+}

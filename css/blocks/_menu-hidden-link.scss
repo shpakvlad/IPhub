@@ -1,0 +1,17 @@
+//*************************************
+// CSS style module for section _menu-hidden-link
+// author: Shpakov Vladyslav
+// at: 03.02.2025 19:13
+//*************************************
+
+@use "../helpers" as *;
+
+.header__menu-hidden-link {
+  @include fluid-font-size(34, 22);
+  color: var(--white);
+  transition-duration: var(--transition-duration);
+
+  &:hover {
+    color: var(--red);
+  }
+}

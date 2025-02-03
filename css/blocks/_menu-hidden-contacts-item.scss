@@ -1,0 +1,28 @@
+//*************************************
+// CSS style module for section _menu-hidden-contacts-item
+// author: Shpakov Vladyslav
+// at: 03.02.2025 19:28
+//*************************************
+
+@use "../helpers" as *;
+
+.header__menu-hidden-contacts-item {
+  max-width: toRem(260);
+
+  &:not(:last-child) {
+    margin-bottom: fluid(50, 30);
+  }
+
+  span:first-child {
+    margin-right: toRem(15);
+  }
+}
+
+.social-contacts {
+  display: block;
+  transition-duration: var(--transition-duration);
+
+  &:hover {
+    color: var(--red);
+  }
+}
